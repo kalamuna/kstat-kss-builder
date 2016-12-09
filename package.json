@@ -1,6 +1,6 @@
 {
   "name": "kss-node-twig-builder",
-  "version": "0.8.0",
+  "version": "0.7.0",
   "description": "The Twig.js builder for kss-node.",
   "main": "builder.js",
   "scripts": {
