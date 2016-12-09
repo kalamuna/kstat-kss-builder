@@ -24,7 +24,7 @@ enjoy.
 
 ## Development
 
-kstat-kss-builder was built using sass, grunt for sass compilation, and bower for browser facing dependencies.
+kstat-kss-builder was built using sass, grunt for sass compilation.
 
 ### Commands
 ```
