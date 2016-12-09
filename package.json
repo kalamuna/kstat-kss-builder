@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "grunt watch",
     "sass": "./node_modules/.bin/node-sass --output-style compressed styles/kss.scss kss-assets/kss.css",
-    "postinstall": "mkdir -p kss-assets/vendor && cp -R ./node_modules/vex-js/ kss-assets/vendor/vex"
+    "postinstall": "mkdir -p ./kss-assets/vendor && cp -R ./node_modules/vex-js/ ./kss-assets/vendor/vex"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
@@ -17,5 +17,10 @@
   },
   "dependencies": {
     "vex-js": "^3.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kalamuna/kstat-kss-builder"
   }
 }
