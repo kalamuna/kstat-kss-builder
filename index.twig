@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title> {{options.title}}</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="kss-assets/vendor/vex/dist/css/vex.css">
+  <link rel="stylesheet" href="kss-assets/vendor/vex/dist/css/vex-theme-plain.css">
+  <link rel="stylesheet" href="kss-assets/kss.css">
+
+  {{ styles|raw }}
+
+</head>
+
+<body id="kss-node">
+
+<main role="main" class="kss-main">
+
+    {% if homepage %}
+      <section id="kssref-0" class="kss-overview">
+        {{ homepage|raw }}
+      </section>
+    {% else %}
+      {% for section in sections %}
+        {% if section.depth == 1 %}
+          {% include "components/molecules/page_header.twig" %}
+        {% else %}
+          {% include "components/molecules/section.twig" %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+  {% include "components/atoms/sidebar_toggle.twig" %}
+  {% include "components/organisms/sidebar.twig" %}
+
+</main>
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/vendor/vex/dist/js/vex.js"></script>
+<script src="kss-assets/prettify.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="kss-assets/kstat-kss.js"></script>
+<script>
+  prettyPrint();
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+</script>
+{{ scripts|raw }}
+
+{# This will only be included in the demo page. #}
+{% if options.demo %}
+  <footer class="kss-github">
+    <!-- https://github.com/blog/273-github-ribbons -->
+    <a href="https://github.com/kss-node/kss-node"><img src="kss-assets/github-fork--black.png" alt="Fork me on GitHub"></a>
+  </footer>
+{% endif %}
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

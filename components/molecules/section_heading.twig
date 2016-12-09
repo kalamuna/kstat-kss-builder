@@ -1,0 +1,17 @@
+<div class="title-block">
+
+  <a class="kss-title__permalink" href="#kssref-{{ section.referenceURI }}">
+    <span class="kss-title__ref">
+      {{ section.referenceNumber }}
+      <span class="kss-title__permalink-hash">
+        {{ hasNumericReferences ? '#permalink' : section.reference }}
+      </span>
+    </span>
+  </a>
+
+  {% set headerElement = (section.depth > 6) ? 'h6' : 'h' ~ section.depth %}
+  <{{ headerElement }} class="kss-title kss-title--level-{{ section.depth }}">
+    {{ section.header }}
+  </{{ headerElement }}>
+
+</div>

@@ -1,0 +1,20 @@
+{% if section.example %}
+
+  <div class="kss-default__example">
+    {{ section.example|raw }}
+  </div>
+
+  {% include "modifiers.twig" %}
+  {% if section.markup %}
+    {% include "markup.twig" %}
+  {% endif %}
+{% endif %}
+
+<div class="controls">
+  {% if section.modifiers is not empty %}
+    <a class="modifiers_toggle" href="#">Modifiers</a>
+  {% endif %}
+  {% if section.markup %}
+    <a class="markup_toggle" href="#">Markup</a>
+  {% endif %}
+</div>

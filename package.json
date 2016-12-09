@@ -1,0 +1,22 @@
+{
+  "name": "kss-node-twig-builder",
+  "version": "3.0.0",
+  "description": "The Twig.js builder for kss-node.",
+  "main": "builder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "grunt watch",
+    "sass": "./node_modules/.bin/node-sass --output-style compressed styles/kss.scss kss-assets/kss.css",
+    "postinstall": "bower install"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^1.0.1",
+    "node-sass": "^3.4.2"
+  },
+  "dependencies": {
+    "bower": "^1.8.0",
+    "vex": "0.0.4"
+  }
+}

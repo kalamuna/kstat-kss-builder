@@ -1,0 +1,32 @@
+.kss-overview {
+
+  background-image: url("../../images/gentian_corporate.jpg");
+  height: 100%;
+  padding: 0 !important;
+
+  background-repeat: no-repeat;
+
+  background-size: 60%;
+  background-position: 90% bottom;
+
+  @media(min-width: 480px) {
+    background-size: 50%;
+  }
+
+  @media(min-width: 640px) {
+    background-size: 45%;
+  }
+
+  @media(min-width: 900px) {
+    background-size: 35%;
+  }
+
+  @media(min-width: 1074px) {
+    background-size: 31%;
+  }
+
+  @media(min-width: 1300px) {
+    background-size: 27%;
+  }
+
+}

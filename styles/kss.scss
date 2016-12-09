@@ -1,0 +1,404 @@
+
+// ------------------------------------------------------------------------------
+//   Variables - Colors, Fonts, etc.
+// ------------------------------------------------------------------------------
+
+$kss-font-size            : 16px;
+$kss-vertical-rhythm      : $kss-font-size * 1.5;
+
+// ------------------------------------------------------------------------------
+// Wrap all of this builder's base HTML styling inside a .kss-style selector.
+// ------------------------------------------------------------------------------
+
+html,
+body {
+  height: 100%;
+}
+
+.kss-style {
+  line-height: $kss-vertical-rhythm;
+
+  a {
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 0.5s;
+
+    &:hover,
+    &:active {
+      outline: 0;
+    }
+  }
+
+  p {
+    margin: ($kss-vertical-rhythm/2) 0 $kss-vertical-rhythm 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.15em;
+  }
+
+  h4, h5, h6 {
+    font-weight: bold;
+  }
+
+  blockquote {
+    margin: 0;
+    padding-left: $kss-vertical-rhythm;
+  }
+
+  hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    margin: $kss-vertical-rhythm 0;
+    padding: 0;
+  }
+
+  pre, code, kbd, samp {
+    font-size: 1em;
+  }
+
+  pre {
+    white-space: pre;
+    overflow: scroll;
+  }
+
+  ins {
+    background: #ff9;
+    text-decoration: none;
+  }
+
+  mark {
+    background: #ff0;
+    font-weight: bold;
+  }
+
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sup { top: -0.5em;     }
+  sub { bottom: -0.25em; }
+
+  ul, ol {
+    margin: $kss-vertical-rhythm 0;
+    padding: 0 0 0 $kss-vertical-rhythm;
+  }
+  li p:last-child {
+    margin: 0;
+  }
+  dd {
+    margin: 0 0 0 $kss-vertical-rhythm;
+  }
+
+  img {
+    max-width:100%;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  td {
+    vertical-align: top;
+  }
+
+  @media print {
+    a, a:visited { text-decoration: underline; }
+    hr { height: 1px; border:0; border-bottom:1px solid black; }
+    a[href]:after { content: " (" attr(href) ")"; }
+    a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+    abbr[title]:after { content: " (" attr(title) ")"; }
+    pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+    tr, img { page-break-inside: avoid; }
+    img { max-width: 100% !important; }
+    p, h2, h3 { orphans: 3; widows: 3; }
+    h2, h3 { page-break-after: avoid; }
+  }
+}
+
+// ------------------------------------------------------------------------------
+// Layout and page background
+// ------------------------------------------------------------------------------
+
+#kss-node {
+
+  overflow-x: hidden;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.kss-main {
+  position: relative;
+  transition-property: left;
+  left: 0;
+  margin-right: 0;
+  transition-duration: 0.425s;
+  transition-timing-function: ease-out;
+  background: #fff;
+  height: 100%;
+}
+
+// ------------------------------------------------------------------------------
+// Sidebar-area components
+// ------------------------------------------------------------------------------
+
+
+
+.kss-main.nav-active {
+  left: -10em;
+}
+
+#kss-node {
+
+  .kss-doc-title {
+    margin: 0;
+
+    @media screen and (min-width: 769px) {
+      font-size: 1.5em;
+    }
+  }
+
+  .kss-header,
+  .kss-nav {
+    @extend %clearfix;
+    @media screen and (min-width: 769px) {
+      margin-top: 2em;
+    }
+  }
+
+}
+
+// ------------------------------------------------------------------------------
+// Content-area components
+// ------------------------------------------------------------------------------
+
+#kss-node {
+
+  .kss-section {
+    margin-bottom: ($kss-vertical-rhythm * 2);
+  }
+
+  .kss-title {
+    margin-bottom: 0;
+    display: inline-block;
+  }
+
+  .kss-title__ref {
+    font-size: 0.75em;
+    display: block;
+
+    &:before {
+      content: 'Section ';
+    }
+  }
+  .kss-title__permalink {
+    display: block;
+    text-decoration: none;
+  }
+
+  .kss-title__permalink-hash {
+    display: none;
+    color: #ccc;
+  }
+
+  .kss-parameters {
+    display: table;
+    list-style-type: none;
+    margin-top: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .kss-parameters__title {
+    font-weight: bold;
+  }
+  .kss-parameters__item {
+    display: table-row;
+  }
+  .kss-parameters__name {
+    display: table-cell;
+    padding-right: 20px;
+    white-space: nowrap;
+  }
+  .kss-parameters__description {
+    display: table-cell;
+  }
+  .kss-parameters__default-value code {
+    white-space: nowrap;
+  }
+
+  .kss-markup {
+    margin: -1px 0 $kss-vertical-rhythm 0;
+  }
+  .kss-markup pre {
+    margin: 0;
+  }
+
+  .kss-source {
+    font-size: 80%;
+  }
+
+  .kss-github {
+    display:none;
+
+    @media screen and (min-width: 501px) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    img {
+      border: 0;
+    }
+  }
+
+  // ------------------------------------------------------------------------------
+  //   group prettyprint.js styling
+  // ------------------------------------------------------------------------------
+  /* Pretty printing styles. Used with prettify.js. */
+
+  /* SPAN elements with the classes below are added by prettyprint. */
+  .pln { color: #000 }  /* plain text */
+
+  .str { color: #080 }  /* string content */
+  .kwd { color: #008 }  /* a keyword */
+  .com { color: #800 }  /* a comment */
+  .typ { color: #606 }  /* a type name */
+  .lit { color: #066 }  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .pun, .opn, .clo { color: #660 }
+  .tag { color: #008 }  /* a markup tag name */
+  .atn { color: #606 }  /* a markup attribute name */
+  .atv { color: #080 }  /* a markup attribute value */
+  .dec, .var { color: #606 }  /* a declaration; a variable name */
+  .fun { color: red }  /* a function name */
+
+  /* Use higher contrast and text-weight for printable form. */
+  @media print, projection {
+    .str { color: #060 }
+    .kwd { color: #006; font-weight: bold }
+    .com { color: #600; font-style: italic }
+    .typ { color: #404; font-weight: bold }
+    .lit { color: #044 }
+    .pun, .opn, .clo { color: #440 }
+    .tag { color: #006; font-weight: bold }
+    .atn { color: #404 }
+    .atv { color: #060 }
+  }
+
+  /* Specify class=linenums on a pre to get line numbering */
+  ol.linenums {
+    margin: 0;
+    padding: 0 0 3px 0;
+    list-style-type: none;
+
+    li {
+      min-height: $kss-vertical-rhythm;
+      border-bottom: 1px solid #eee;
+      padding: 0 10px;
+      background: #fff;
+
+      &:first-child {
+        padding-top: 3px;
+      }
+    }
+    /* Alternate shading for lines */
+    li.L0,
+    li.L2,
+    li.L4,
+    li.L6,
+    li.L8 {
+      background: #fcfcfc;
+    }
+  }
+}
+
+
+.kss-component-methods {
+  position: relative;
+  height: 2.75em;
+}
+
+.kss-component-methods a {
+  display: inline-block;
+  margin-rigth: 0.25em;
+  padding: .25em .5em;
+  text-align: center;
+}
+
+.kss-main .variants,
+.kss-main .markup {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
+.component-description header .kss-component-methods,
+.component-description header .kss-component-methods {
+  transition-property: opacity;
+  transition-duration: .25s;
+  transition-timing-function: cubic-bezier(.42, 0, .58, 1);
+  opacity: 0;
+}
+
+.component-description header:focus .kss-component-methods,
+.component-description header:hover .kss-component-methods {
+    opacity: 1;
+    display: block;
+}
+
+.component-description header {
+  position: relative;
+}
+
+.component-description header .kss-drawer-close {
+  position: absolute;
+  right: 1em;
+  top: -0.5em;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-decoration: none;
+}
+
+.component-description header .kss-drawer-close:hover,
+.component-description header .kss-drawer-close:focus {
+  background-color: #333;
+  color: #fff;
+}
+
+.kss-modifier__heading {
+  border: none;
+  background: transparent;
+}
+
+@import "extendables";
+@import "mixins";
+
+@import "../components/atoms/contextual_menu__actuator";
+@import "../components/atoms/sidebar_header";
+@import "../components/atoms/sidebar_toggle";
+@import "../components/atoms/source_reference";
+@import "../components/atoms/title";
+
+@import "../components/molecules/markup";
+@import "../components/molecules/modifiers";
+@import "../components/molecules/component_details";
+@import "../components/molecules/page_header";
+@import "../components/molecules/kss_header";
+@import "../components/molecules/section_heading";
+@import "../components/molecules/section";
+
+@import "../components/organisms/sidebar";
+
+@import "../components/templates/kss_home";

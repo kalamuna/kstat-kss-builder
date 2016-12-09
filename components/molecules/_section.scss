@@ -1,0 +1,67 @@
+
+.kss-default__example {
+  @extend %clearfix;
+  border: 1px #dedede solid;
+  margin-top: 1em;
+  padding: 1em;
+  min-height: 4em;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.kss-example {
+  @extend %clearfix;
+  position: relative;
+}
+
+
+.kss-example:after,
+.kss-example:before {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+.kss-section {
+  padding: 2em;
+}
+
+.vex-overlay {
+  animation-duration: .1875s;
+  background-color: rgba(#fff,.8);
+  z-index: 10001;
+}
+
+.vex-content {
+
+  overflow: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100% !important;
+  max-width: 900px !important;
+  max-height: 100%;
+  z-index: 10002;
+
+  box-shadow: 2px 2px 12px rgba(#000,.3);
+
+  .vex-close::before {
+    border-radius: 50%;
+    line-height: 26px;
+    width: 25px;
+    height: 25px;
+    background-color: white !important;
+  }
+
+  .vex-close:hover::before,
+  .vex-close:active::before {
+    background-color: #333 !important;
+    color: white !important;
+  }
+
+  .modal-body {
+    padding: 2em;
+    background-color: #fff;
+  }
+
+
+}

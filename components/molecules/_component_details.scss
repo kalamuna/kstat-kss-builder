@@ -1,0 +1,33 @@
+.component_details {
+
+  .controls {
+
+    @extend %clearfix;
+
+    a {
+      display: block;
+      float: left;
+      font-size: 0.87em;
+      color: #fafafa;
+      background: #333;
+      margin-right: 1em;
+      padding: 0.125em 0.5em;
+
+      &:focus,
+      &:hover {
+        color: #000;
+        background-color: #dedede;
+      }
+
+      &:active {
+        background-color: #222;
+        color: #fff;
+      }
+    }
+  }
+
+}
+
+.vex.vex-theme-plain .vex-content {
+  font: inherit;
+}

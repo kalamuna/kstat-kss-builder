@@ -1,0 +1,12 @@
+.title-block {
+  .contextual_menu__actuator {
+    a {
+      display: inline-block;
+      width: 1em;
+      &:hover {
+        background: #eee;
+        text-decoration: none;
+      }
+    }
+  }
+}

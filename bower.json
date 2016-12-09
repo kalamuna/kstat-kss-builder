@@ -1,0 +1,27 @@
+{
+  "name": "kss-node-twig-builder",
+  "description": "bower dependencies for kstat-kss-builder",
+  "main": "builder.js",
+  "authors": [
+    "Thiago de Mello Bueno <thiago@madeofpeople.org>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "kss",
+    "template",
+    "bower"
+  ],
+  "homepage": "https://github.com/kalamuna/progenity.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vex": "^3.0.0"
+  }
+}
