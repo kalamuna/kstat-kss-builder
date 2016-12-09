@@ -44,13 +44,16 @@
         display: block;
         padding: .75em 1em;
 
-        .is-in-viewport,
         &:focus,
         &:hover,
         &:active,
         .active & {
           background-color: #333;
           color: white;
+        }
+
+        &.is-in-viewport {
+          background-color: #ddd;
         }
       }
     }
