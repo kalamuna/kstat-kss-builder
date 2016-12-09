@@ -1,7 +1,7 @@
 {
-  "name": "kss-node-twig-builder",
+  "name": "kstat-kss-builder",
   "version": "0.7.0",
-  "description": "The Twig.js builder for kss-node.",
+  "description": "A KSS3 Twig builder made for, but not limited to, use with Kalastatic 2.0",
   "main": "builder.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,7 +16,6 @@
     "node-sass": "^3.4.2"
   },
   "dependencies": {
-    "bower": "^1.8.0",
-    "vex": "0.0.4"
+    "bower": "^1.8.0"
   }
 }
