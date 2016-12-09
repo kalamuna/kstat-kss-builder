@@ -43,6 +43,8 @@
       a {
         display: block;
         padding: .75em 1em;
+
+        .is-in-viewport,
         &:focus,
         &:hover,
         &:active,
