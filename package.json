@@ -6,17 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "grunt watch",
-    "sass": "./node_modules/.bin/node-sass --output-style compressed styles/kss.scss kss-assets/kss.css",
-    "postinstall": "mkdir -p ./kss-assets/vendor && cp -R ./node_modules/vex-js/ ./node_modules/kstat-kss-builder/kss-assets/vendor/vex/"
+    "sass": "./node_modules/.bin/node-sass --output-style compressed styles/kss.scss kss-assets/kss.css"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-exec": "^1.0.1",
     "node-sass": "^3.4.2"
-  },
-  "dependencies": {
-    "vex-js": "^3.0.0"
   },
   "license": "MIT",
   "repository": {
