@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "grunt watch",
     "sass": "./node_modules/.bin/node-sass --output-style compressed styles/kss.scss kss-assets/kss.css",
-    "postinstall": "bower install"
+    "postinstall": "mkdir -p kss-assets/vendor && cp -R ./node_modules/vex-js/ kss-assets/vendor/vex"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
@@ -16,6 +16,6 @@
     "node-sass": "^3.4.2"
   },
   "dependencies": {
-    "bower": "^1.8.0"
+    "vex-js": "^3.0.0"
   }
 }
