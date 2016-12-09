@@ -7,6 +7,15 @@
 	white-space: nowrap;
 }
 
+%onscreen {
+	position: relative;
+	left: 0;
+	overflow: visible;
+	width: auto;
+	height: auto;
+	white-space: normal;
+}
+
 %clearfix {
   &:after {
     content: "";

@@ -40,10 +40,16 @@ for (var key in Drupal.behaviors) {
       }
     });
 
-    // wire up individual components
+    // Wire up individual components
     $('.kss-sidebar .kss-nav > ul > li').on('click', function() {
       $(".kss-sidebar").data("active",$(this));
-      kstatKSS.closeSidebar($(this));
+    });
+
+
+    $('.kss-sidebar .kss-nav > ul > li .kss-nav__menu-child-actuator').on('click', function(e){
+      console.log("»|»»", e);
+      e.preventDefault();
+      $(this).closest('.kss-nav__menu-item').toggleClass('active');
     });
 
     $('.component_details .controls .markup_toggle').on('click', function(e) {

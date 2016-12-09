@@ -33,9 +33,8 @@
       &.active {
         outline: none;
 
-        ul {
-          display: block;
-          overflow: hidden;
+        .kss-nav__menu-child {
+          @extend %onscreen;
           max-height: 3000px;
         }
       }
@@ -58,9 +57,10 @@
       }
     }
 
-    ul {
+    .kss-nav__menu-child {
+
+      @extend %offscreen;
       background-color: #fafafa !important;
-      display: none;
       overflow: hidden;
       max-height: 0px;
       transition-property: max-height;
@@ -71,6 +71,12 @@
         padding-left: 2em;
       }
     }
+  }
+
+  .kss-nav__menu-child-actuator {
+    display: inline-block;
+    float: right;
+    color: #dedede;
   }
 
   .nav-active & {

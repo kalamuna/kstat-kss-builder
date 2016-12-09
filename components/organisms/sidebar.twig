@@ -16,9 +16,12 @@
         <li class="kss-nav__menu-item  {% if menu_item.isActive %}active{% endif %}" data-section="{{ menu_item.header }}">
           <a class="kss-nav__menu-link" href="section-{{ menu_item.referenceURI }}.html">
             <span class="kss-nav__name">{{ menu_item.header }}</span>
+            {% if menu_item.children is not empty %}
+            <span class="kss-nav__menu-child-actuator">☰</span>
+            {% endif %}
           </a>
 
-          {% if menu_item.isActive and menu_item.children is not empty %}
+          {% if menu_item.children is not empty %}
             <ul class="kss-nav__menu-child">
             {% for menu_child in menu_item.children %}
               <li class="kss-nav__menu-item {% if menu_child.isActive %}active{% endif %}">
