@@ -17,12 +17,14 @@
 
   {{ styles|raw }}
 
+  <!-- script inclusion configurable through kss-config.json -->
   {% for script in config.scripts.header %}
-  <script src="{{config.scripts.src_root}}{{script}}"></script>
+  <script src="{{script}}"></script>
   {% endfor %}
 
+  <!-- style inclusion configurable through kss-config.json -->
   {% for style in config.styles.header %}
-  <link rel="stylesheet" href="{{config.styles.src_root}}{{style}}">
+  <link rel="stylesheet" href="{{style}}">
   {% endfor %}
 
 </head>
@@ -59,8 +61,9 @@
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="kss-assets/kstat-kss.js"></script>
 
+<!-- script inclusion configurable through kss-config.json -->
 {% for script in config.scripts.footer %}
-<script src="{{config.scripts.src_root}}{{script}}"></script>
+<script src="{{script}}"></script>
 {% endfor %}
 
 <script>
