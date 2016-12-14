@@ -10,11 +10,20 @@
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
 
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.0.0/css/vex.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.0.0/css/vex-theme-plain.min.css">
   <link rel="stylesheet" href="kss-assets/kss.css">
 
   {{ styles|raw }}
+
+  {% for script in config.scripts.header %}
+  <script src="{{config.scripts.src_root}}{{script}}"></script>
+  {% endfor %}
+
+  {% for style in config.styles.header %}
+  <link rel="stylesheet" href="{{config.styles.src_root}}{{style}}">
+  {% endfor %}
 
 </head>
 
@@ -49,6 +58,11 @@
 <script src="kss-assets/prettify.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="kss-assets/kstat-kss.js"></script>
+
+{% for script in config.scripts.footer %}
+<script src="{{config.scripts.src_root}}{{script}}"></script>
+{% endfor %}
+
 <script>
   prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
