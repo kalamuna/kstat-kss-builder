@@ -4,7 +4,7 @@
 <head>
 
   <meta charset="utf-8">
-  <title> {{options.title}}</title>
+  <title> KSS Style Guide</title>
 
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
@@ -15,42 +15,75 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.0.0/css/vex-theme-plain.min.css">
   <link rel="stylesheet" href="kss-assets/kss.css">
 
-  {{ styles|raw }}
+  
 
   <!-- script inclusion configurable through kss-config.json -->
-  {% for script in config.scripts.header %}
-  <script src="{{script}}"></script>
-  {% endfor %}
-
+  
   <!-- style inclusion configurable through kss-config.json -->
-  {% for style in config.styles.header %}
-  <link rel="stylesheet" href="{{style}}">
-  {% endfor %}
-
+  
 </head>
 
 <body id="kss-node">
 
 <main role="main" class="kss-main">
 
-    {% if homepage %}
-      <section id="kssref-0" class="kss-overview">
-        <header class="kss__header">
-          {{ homepage|raw }}
-        </header>
-      </section>
-    {% else %}
-      {% for section in sections %}
-        {% if section.depth == 1 %}
-          {% include "components/molecules/page_header.twig" %}
-        {% else %}
-          {% include "components/molecules/section.twig" %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
+                            <header id="kssref-kstat-kss-builder" class="kss-section kss-section--depth-1">
+  <div class="kss-style">
 
-  {% include "components/atoms/sidebar_toggle.twig" %}
-  {% include "components/organisms/sidebar.twig" %}
+    <div class="title-block">
+
+  <a class="kss-title__permalink" href="#kssref-kstat-kss-builder">
+    <span class="kss-title__ref">
+      1
+      <span class="kss-title__permalink-hash">
+        kstat-kss-builder
+      </span>
+    </span>
+  </a>
+
+    <h1 class="kss-title kss-title--level-1">
+    KSTAT KSS Builder
+  </h1>
+
+</div>
+
+          <div class="kss-description">
+        <p>Builds out a beautiful KSS styleguide.</p>
+
+      </div>
+    
+
+</header>
+                  
+  <a class="sidebar-toggle" href="#"><span>☰</span></a>
+  <aside class="kss-sidebar kss-style">
+
+  <header class="kss-header">
+  <h1 class="kss-doc-title page__heading">
+    KSS Style Guide
+  </h1>
+</header>
+
+  <nav class="kss-nav">
+
+    <ul class="kss-nav__menu">
+
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="./">
+          <span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+
+              <li class="kss-nav__menu-item  active" data-section="KSTAT KSS Builder">
+          <a class="kss-nav__menu-link" href="section-kstat-kss-builder.html">
+            <span class="kss-nav__name">KSTAT KSS Builder</span>
+                      </a>
+
+          
+        </li>
+          </ul>
+  </nav>
+</aside>
 
 </main>
 
@@ -64,9 +97,6 @@
 <script src="kss-assets/kstat-kss.js"></script>
 
 <!-- script inclusion configurable through kss-config.json -->
-{% for script in config.scripts.footer %}
-<script src="{{script}}"></script>
-{% endfor %}
 
 <script>
   prettyPrint();
@@ -75,15 +105,9 @@
     className: 'is-in-viewport'
   });
 </script>
-{{ scripts|raw }}
 
-{# This will only be included in the demo page. #}
-{% if options.demo %}
-  <footer class="kss-github">
-    <!-- https://github.com/blog/273-github-ribbons -->
-    <a href="https://github.com/kss-node/kss-node"><img src="kss-assets/github-fork--black.png" alt="Fork me on GitHub"></a>
-  </footer>
-{% endif %}
+
+
 
 <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
