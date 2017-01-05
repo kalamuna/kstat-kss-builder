@@ -35,7 +35,9 @@
 
     {% if homepage %}
       <section id="kssref-0" class="kss-overview">
-        {{ homepage|raw }}
+        <header class="kss__header">
+          {{ homepage|raw }}
+        </header>
       </section>
     {% else %}
       {% for section in sections %}
