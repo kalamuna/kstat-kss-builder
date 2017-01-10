@@ -4,7 +4,8 @@
   "description": "A KSS3 Twig builder made for, but not limited to, use with Kalastatic 2.0",
   "main": "builder.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "kss --config=test/kss-config.json",
+    "start": "concurrently 'npm run test' 'http-server test/out' 'npm run watch'",
     "watch": "grunt watch",
     "sass": "./node_modules/.bin/node-sass --output-style compressed styles/kss.scss kss-assets/kss.css"
   },
@@ -12,7 +13,8 @@
     "grunt": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-exec": "^1.0.1",
-    "node-sass": "^3.4.2"
+    "kss": "^3.0.0-beta.17",
+    "node-sass": "^4.1.1"
   },
   "license": "MIT",
   "repository": {
