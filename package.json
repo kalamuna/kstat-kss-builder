@@ -18,5 +18,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/kalamuna/kstat-kss-builder"
+  },
+  "dependencies": {
+    "testit": "^2.1.3"
   }
 }
