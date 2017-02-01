@@ -4,17 +4,29 @@
     {{ section.example|raw }}
   </div>
 
-  {% include "modifiers.twig" %}
-  {% if section.markup %}
-    {% include "markup.twig" %}
-  {% endif %}
-{% endif %}
+  {% if section.title == "Brand Colors" %}
 
-<div class="controls">
-  {% if section.modifiers is not empty %}
-    <a class="modifiers_toggle" href="#">Modifiers</a>
+    {% include "color_grid.twig" %}
+
+  {% else %}
+
+    {% if section.modifiers is not empty %}
+      {% include "modifiers.twig" %}
+    {% endif %}
+
+    {% if section.markup %}
+      {% include "markup.twig" %}
+    {% endif %}
+
+    <div class="controls">
+      {% if section.modifiers is not empty %}
+        <a class="modifiers_toggle" href="#">Modifiers</a>
+      {% endif %}
+      {% if section.markup %}
+        <a class="markup_toggle" href="#">Markup</a>
+      {% endif %}
+    </div>
+
   {% endif %}
-  {% if section.markup %}
-    <a class="markup_toggle" href="#">Markup</a>
-  {% endif %}
-</div>
+
+{% endif %}

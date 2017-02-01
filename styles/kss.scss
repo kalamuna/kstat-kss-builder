@@ -391,10 +391,11 @@ body {
 @import "../components/atoms/source_reference";
 @import "../components/atoms/title";
 
+@import "../components/molecules/page_header";
 @import "../components/molecules/markup";
 @import "../components/molecules/modifiers";
 @import "../components/molecules/component_details";
-@import "../components/molecules/page_header";
+@import "../components/molecules/color_swatch";
 @import "../components/molecules/kss_header";
 @import "../components/molecules/section_heading";
 @import "../components/molecules/section";
