@@ -1,7 +1,41 @@
-%color_swatch {
+%color-swatch {
+
+  box-sizing: border-box;
+  padding: 0.5em;
+  width: 50%;
+  float: left;
+
+
+  .card {
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    padding: 1em 1em 0.75em 1em;
+  }
+
+  .example {
+    height: 10em;
+  }
+
+  .info {
+
+    padding-top: 1em;
+
+    p {
+      margin: 0;
+      margin-bottom: 0.25em;
+      font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    width: 33.3333%;
+  }
+
+  @media (min-width: $screen-md) {
+    width: 25%;
+  }
 
 }
 
-.color_swatch {
-  @extend %color_swatch;
+.color-swatch {
+  @extend %color-swatch;
 }

@@ -9,26 +9,33 @@
       </div>
     {% endif %}
 
-    {% for parameter in section.parameters %}
-      {% if loop.first %}
-        <div class="kss-parameters__title">Parameters:</div>
-        <ul class="kss-parameters">
-      {% endif %}
-        <li class="kss-parameters__item">
-          <div class="kss-parameters__name"><code>{{ parameter.name }}</code></div>
-          <div class="kss-parameters__description">
-            {{ parameter.description|raw }}
-            {% if parameter.defaultValue %}
-              <div class="kss-parameters__default-value">
-                Defaults to: <code>{{ parameter.defaultValue }}</code>
-              </div>
-            {% endif %}
-          </div>
-        </li>
-      {% if loop.last %}
-        </ul>
-      {% endif %}
-    {% endfor %}
+    {% if section.reference == "colors.colors" %}
+
+      {% include "color_grid.twig" %}
+
+    {% else %}
+
+      {% for parameter in section.parameters %}
+        {% if loop.first %}
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+        {% endif %}
+          <li class="kss-parameters__item">
+            <div class="kss-parameters__name"><code>{{ parameter.name }}</code></div>
+            <div class="kss-parameters__description">
+              {{ parameter.description|raw }}
+              {% if parameter.defaultValue %}
+                <div class="kss-parameters__default-value">
+                  Defaults to: <code>{{ parameter.defaultValue }}</code>
+                </div>
+              {% endif %}
+            </div>
+          </li>
+        {% if loop.last %}
+          </ul>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
   </div>
 
   <div class="component_details">

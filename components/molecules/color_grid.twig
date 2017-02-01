@@ -1,5 +1,3 @@
-{% for modifier in section.modifiers %}
-  {{ modifier.name }}
-  {% include "color_swatch.twig" with modifier only %}
-  {{ dump(modifier)}}
+{% for parameter in section.parameters %}
+  {% include "color_swatch.twig" with parameter only %}
 {% endfor %}
