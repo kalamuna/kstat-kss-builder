@@ -1,11 +1,12 @@
 <article class="color-swatch">
   <div class="wrap">
-    <div class="example">
-      <span class="sr-only">{{hex_val}}
+    <div class="example" style="{{modifier.description}}">
+      <span class="sr-only">{{modifier}}</span>
     </div>
     <div class="info">
-      <p class="var">{{var_name}}</p>
-      <p class="hex">{{hex_val}}</p>
+      <p class="var">{{{{modifier}}}}</p>
+      <p class="hex">{{modifier.name}}</p>
+      <p class="description">{{modifier.description}}</p>
     </div>
   </div>
 </article>

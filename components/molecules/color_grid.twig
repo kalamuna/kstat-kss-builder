@@ -1,6 +1,5 @@
 {% for modifier in section.modifiers %}
-  <pre>
-    {{ modifier.name }}
-    {{ dump(modifier)}}
-  </pre>
+  {{ modifier.name }}
+  {% include "color_swatch.twig" with modifier only %}
+  {{ dump(modifier)}}
 {% endfor %}
