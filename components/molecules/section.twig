@@ -2,16 +2,15 @@
   <div class="kss-style">
 
     {% include "section_heading.twig" %}
-
     {% if section.description %}
       <div class="kss-description">
         {{ section.description|raw }}
       </div>
     {% endif %}
 
-    {% if section.reference == "colors" %}
+    {% if section.reference|split(".")|last == "colors" %}
 
-      {% include "color_grid.twig" %}
+      {% include "color_grid.twig" with section only %}
 
     {% else %}
 
