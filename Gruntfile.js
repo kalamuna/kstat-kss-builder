@@ -9,6 +9,9 @@ module.exports = function(grunt) {
     exec: {
       sass: {
         cmd: 'npm run-script sass'
+      },
+      test: {
+        cmd: 'npm run test'
       }
     },
 
@@ -20,7 +23,7 @@ module.exports = function(grunt) {
           'components/**/*',
           '**/*.twig'
         ],
-        tasks: ['sass'],
+        tasks: ['sass', 'test'],
         options: {
           spawn: false,
           interupt: true,
@@ -36,5 +39,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('sass', ['exec:sass']);
+  grunt.registerTask('test', ['exec:test']);
   grunt.registerTask('default', ['sass', 'watch']);
 };
