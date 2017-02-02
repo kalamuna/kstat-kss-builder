@@ -41,6 +41,10 @@
       {% for section in sections %}
         {% if section.depth == 1 %}
           {% include "components/molecules/page_header.twig" %}
+          {% if section.reference == "colors" %}
+            {% include "components/molecules/color_grid.twig" with section only %}
+          {% endif %}
+
         {% else %}
           {% include "components/molecules/section.twig" %}
         {% endif %}
