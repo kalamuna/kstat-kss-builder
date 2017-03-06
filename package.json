@@ -1,6 +1,6 @@
 {
   "name": "kstat-kss-builder",
-  "version": "0.13.1",
+  "version": "0.13.4",
   "description": "A KSS3 Twig builder made for, but not limited to, use with Kalastatic 2.0",
   "main": "builder.js",
   "scripts": {
