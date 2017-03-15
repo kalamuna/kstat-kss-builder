@@ -14,6 +14,10 @@
   position: relative;
 }
 
+.kss-main > .kss-example {
+  padding-left: 1em;
+  padding-right: 1em;
+}
 
 .kss-example:after,
 .kss-example:before {
@@ -24,6 +28,7 @@
 
 .kss-section {
   padding: 2em;
+  @extend %clearfix;
 }
 
 .vex-overlay {
