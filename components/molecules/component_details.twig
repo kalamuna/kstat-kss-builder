@@ -5,11 +5,11 @@
   </div>
 
   {% if section.modifiers is not empty %}
-    {% include "modifiers.twig" %}
+    {% include "@builderTwig/components/molecules/modifiers.twig" %}
   {% endif %}
 
   {% if section.markup %}
-    {% include "markup.twig" %}
+    {% include "@builderTwig/components/molecules/markup.twig" %}
   {% endif %}
 
   <div class="controls">

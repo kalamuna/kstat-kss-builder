@@ -40,19 +40,19 @@
     {% else %}
       {% for section in sections %}
         {% if section.depth == 1 %}
-          {% include "components/molecules/page_header.twig" %}
+          {% include "@builderTwig/components/molecules/page_header.twig" %}
           {% if "color-swatches" in section.reference %}
-            {% include "components/molecules/color_grid.twig" with section only %}
+            {% include "@builderTwig/components/molecules/color_grid.twig" with section only %}
           {% endif %}
 
         {% else %}
-          {% include "components/molecules/section.twig" %}
+          {% include "@builderTwig/components/molecules/section.twig" %}
         {% endif %}
       {% endfor %}
     {% endif %}
 
-  {% include "components/atoms/sidebar_toggle.twig" %}
-  {% include "components/organisms/sidebar.twig" %}
+  {% include "@builderTwig/components/atoms/sidebar_toggle.twig" %}
+  {% include "@builderTwig/components/organisms/sidebar.twig" %}
 
 </main>
 
