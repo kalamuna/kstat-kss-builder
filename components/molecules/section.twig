@@ -1,7 +1,7 @@
 <section id="kssref-{{ section.referenceURI }}" class="kss-section kss-section--depth-{{ section.depth }}">
   <div class="kss-style">
 
-    {% include "section_heading.twig" %}
+    {% include "@builderTwig/components/molecules/section_heading.twig" %}
     {% if section.description %}
       <div class="kss-description">
         {{ section.description|raw }}
@@ -10,7 +10,7 @@
 
     {% if "color-swatches" in section.reference|split(".")|last %}
 
-      {% include "color_grid.twig" with section only %}
+      {% include "@builderTwig/components/molecules/color_grid.twig" with section only %}
 
     {% else %}
 
@@ -38,10 +38,10 @@
   </div>
 
   <div class="component_details">
-    {% include "component_details.twig" %}
+    {% include "@builderTwig/components/molecules/component_details.twig" %}
   </div>
 
   {% if section.sourceFile.name %}
-    {% include "../atoms/source_reference.twig" %}
+    {% include "@builderTwig/components/atoms/source_reference.twig" %}
   {% endif %}
 </section>

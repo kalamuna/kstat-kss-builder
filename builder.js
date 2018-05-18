@@ -58,7 +58,6 @@ class KssBuilderTwig extends KssBuilderBaseTwig {
         default: 'KSS Style Guide'
       }
     });
-
   }
 }
 
