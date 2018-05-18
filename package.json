@@ -10,13 +10,13 @@
     "sass": "./node_modules/.bin/node-sass --output-style compressed styles/kss.scss kss-assets/kss.css"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0",
-    "grunt": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
+    "concurrently": "^3.5.1",
+    "grunt": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.1",
     "grunt-exec": "^3.0.0",
-    "http-server": "^0.10.0",
-    "kss": "^3.0.0-beta.19",
-    "node-sass": "^4.5.3"
+    "http-server": "^0.11.1",
+    "kss": "^3.0.0-beta.20",
+    "node-sass": "^4.9.0"
   },
   "license": "MIT",
   "repository": {
