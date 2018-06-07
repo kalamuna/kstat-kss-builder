@@ -1,4 +1,4 @@
-# kstat-kss-builder
+# kstat-kss-builder [![npm version](https://badge.fury.io/js/kstat-kss-builder.svg)](https://badge.fury.io/js/kstat-kss-builder) [![Build Status](https://travis-ci.org/kalamuna/kstat-kss-builder.svg?branch=master)](https://travis-ci.org/kalamuna/kstat-kss-builder)
 
 A custom Twig KSS Builder made for use with Kalastatic (though that is not a requirement).
 
