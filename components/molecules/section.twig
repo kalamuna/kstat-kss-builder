@@ -1,7 +1,8 @@
-<section id="kssref-{{ section.referenceURI }}" class="kss-section kss-section--depth-{{ section.depth }}">
+<section id="kssref-{{ section.referenceURI }}" class="kss-section kss-section--depth-{{ section.depth }} {% if template.isItem %}is-fullscreen{% endif %}">
   <div class="kss-style">
 
     {% include "@builderTwig/components/molecules/section_heading.twig" %}
+
     {% if section.description %}
       <div class="kss-description">
         {{ section.description|raw }}

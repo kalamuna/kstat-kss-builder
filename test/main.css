@@ -23,7 +23,10 @@
  * This is a second component.
  *
  * Markup:
- * <div class="example">Example 2</div>
+ * <div class="example2 {{modifier_class}}">Example 2</div>
+ *
+ * .kstat-kss-builder-test-blue - Blue Style
+ * .kstat-kss-builder-test-red  - Red Style
  *
  * Styleguide: kstat-kss-builder.example2
  */
