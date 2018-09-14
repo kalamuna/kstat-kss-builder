@@ -11,7 +11,7 @@ kstat-kss-builder was designed to be ingested as an npm package.
 npm install kstat-kss-builder --save
 ```
 
-then in your project create ```ksss-config.json``` and point builder to kstat-kss-builder:
+then in your project create ```kss-config.json``` and point builder to kstat-kss-builder:
 ```
 {
   ...
